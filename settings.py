@@ -1,5 +1,6 @@
 class Settings():
     """A class to store all settings for Alien Invasion"""
+    SPEED_FACTOR = 5
     def __init__(self):
         """Initialize the game's settings."""
         #Screen settings
@@ -36,9 +37,9 @@ class Settings():
         self.initialize_dynamic_settings()
     def initialize_dynamic_settings(self):
         """Initialize the dynamice settings"""
-        self.ship_speed_factor = 1.5
-        self.bullet_speed_factor = 3
-        self.alien_speed_factor = 1
+        self.ship_speed_factor = 1.5*self.SPEED_FACTOR
+        self.bullet_speed_factor = 3*self.SPEED_FACTOR
+        self.alien_speed_factor = 1*self.SPEED_FACTOR
 
         #scoring
         self.alien_points = 50
